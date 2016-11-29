@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Businessforsale</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+  <nav class ="navbar navbar-default">
+    <div class = "container-fluid">
+      <a class = "navbar-brand" href= "#">Businessforsale</a>
+      <ul class = "nav navbar-nav navbar-right"> 
+  	   <% if user_signed_in? %>
+        <li><%= link_to 'Create Listings', new_business_listing_path %></li>
+        <li><%= link_to 'Franchise Opportunity', root_path%></li>
+        <li><%= link_to 'Business Broker', root_path%></li>
+        <li><%= link_to 'My Account',root_path%></li>
+  	     <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+      </ul>
+      <% else %>
+
+      <ul class = "nav navbar-nav navbar-left"> 
+        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+        <li><%= link_to 'Log In', new_user_session_path %></li>
+      </ul>
+      <% end %>
+    </div>
+  </nav>
+    <div class = "container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

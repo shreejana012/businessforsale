@@ -1,0 +1,31 @@
+<%= simple_form_for @business_listing do |f| %>
+	<div class="row">
+	    <div class = "col-md-4">
+			<%= f.input :title%>
+			<%= f.input :location %>
+			<%= f.input :revenue%>
+			<%= f.input :cash_flow %>
+			<%= f.input :business_description %>
+			<%= f.input :property_size %>
+			<%= f.input :years_estd %>
+		</div>
+		<div class = "col-md-4">
+			
+			<%= f.input :property_type %>
+			<%= f.input :business_location %>
+			<%= f.input :premise_details%>
+			<%= f.input :competition %>
+			<%= f.input :expansion_potential %>
+		</div>
+		<div class = "col-md-4">
+			
+			<%= f.input :employees %>
+			<%= f.input :trading_hours %>
+			<%= f.input :support_training %>
+			<%= f.input :financing_available %>
+			<%= f.input :reason_for_selling %>
+			<%= f.submit 'Post', class:'btn btn-success', data: { disable_with: "Posting..." } %>
+		</div>
+			
+	</div>
+<% end %>
