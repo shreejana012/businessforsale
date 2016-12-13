@@ -1,1 +1,8 @@
-<h1>This is static page</h1>
+<h3>Business</h3>	
+<% @business_listing.each do |item| %>
+<%= image_tag item.photo, class: "image" %>
+<%= item.title %>
+Location
+<%= item.location %>
+<%= link_to 'Read More', business_listing_path(item) %>
+<% end %>

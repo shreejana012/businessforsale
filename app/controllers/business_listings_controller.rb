@@ -27,6 +27,7 @@ class BusinessListingsController < ApplicationController
 
 		def business_params
 			params.require(:business_listing).permit(
+				:photo,
 				:user_id, 
 				:title, 
 				:location, 

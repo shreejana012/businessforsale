@@ -1,6 +1,11 @@
 <%= simple_form_for @business_listing do |f| %>
+<h3>Create your listings</h3>
+<p>Unless stated as required ( * ), all the fields are optional. We understand that anonymity and privacy may sometimes be key considerations when selling a business - therefore business names and location details do not have to be shown.
+To achieve the best results please ensure you fill out as much information as possible.
+Please note: Do not use ALL CAPITAL LETTERS.</p>
 	<div class="row">
 	    <div class = "col-md-4">
+	    	<%= f.input :photo%>
 			<%= f.input :title%>
 			<%= f.input :location %>
 			<%= f.input :revenue%>
@@ -24,6 +29,7 @@
 			<%= f.input :support_training %>
 			<%= f.input :financing_available %>
 			<%= f.input :reason_for_selling %>
+			<%= f.input :featured %>
 			<%= f.submit 'Post', class:'btn btn-success', data: { disable_with: "Posting..." } %>
 		</div>
 			

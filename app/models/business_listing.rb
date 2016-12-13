@@ -1,4 +1,5 @@
 class BusinessListing < ApplicationRecord
+	mount_uploader :photo, PhotoUploader
 	belongs_to :user
 	validates :user_id,
 			 	:title, 
@@ -18,4 +19,5 @@ class BusinessListing < ApplicationRecord
 				:support_training, 
 				:financing_available, 
 				:reason_for_selling, presence: true
+				
 end
