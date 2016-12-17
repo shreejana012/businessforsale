@@ -45,7 +45,7 @@ end
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'simple_form'
-gem 'country_select'
+gem 'country_select', '~> 1.0'
 gem 'carrierwave'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

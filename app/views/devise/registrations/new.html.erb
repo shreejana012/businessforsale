@@ -32,6 +32,10 @@
           <div class="field">
             <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Password Again'%>
           </div>
+          <div class = "field">
+              <%= f.label :Select_your_country %><br>
+               <%= f.country_select :country_select, as: :country_select, required: true %>
+          </div>
           <br />
           <div class="actions">
             <%= f.submit "Sign up" %>

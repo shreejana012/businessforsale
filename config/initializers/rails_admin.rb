@@ -4,6 +4,14 @@ RailsAdmin.config do |config|
   config.authorize_with do
      redirect_to main_app.root_path unless current_user.admin == true
     end
+    config.model 'BusinessListing' do
+      include_all_fields
+      list do
+        field :approve do
+          visible true
+        end
+      end
+    end
   ## == Devise ==
   # config.authenticate_with do
   #   warden.authenticate! scope: :user
