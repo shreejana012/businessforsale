@@ -1,0 +1,41 @@
+FactoryGirl.define do
+    factory :business_listing do
+      title "this is title"
+      location "bihar"
+      revenue "234"
+      cash_flow "678"
+      business_description "this is a description bla bla bla"
+      property_size "567"
+      years_estd "2016"
+      property_type "fghj"
+      business_location "india"
+      premise_details "ghj hjk hjk"
+      competition "hdsjk hfdsjk hdsjk"
+      expansion_potential "fsbvbh dhf"
+      employees "3"
+      trading_hours "8"
+      support_training "yes this is a training"
+      financing_available "yes yes "
+      reason_for_selling "ghato"
+
+    factory :invalid_business_listing do
+      title "this is title"
+      location "bihar"
+      revenue "234"
+      cash_flow "678"
+      business_description "this is a description bla bla bla"
+      property_size "567"
+      years_estd "2016"
+      property_type "fghj"
+      business_location "india"
+      premise_details "ghj hjk hjk"
+      competition "hdsjk hfdsjk hdsjk"
+      expansion_potential "fsbvbh dhf"
+      employees ""
+      trading_hours ""
+      support_training ""
+      financing_available ""
+      reason_for_selling ""
+    end
+end
+end

@@ -1,20 +1,18 @@
 class BusinessListingsController < ApplicationController
-		before_action :authenticate_user!, only: [:new, :create,:edit] 
+		before_action :authenticate_user!, only: [:new, :create,:edit]
 		def new
 			@business_listing = BusinessListing.new
 		end
 
 		def create
-            @business_listing = current_user.business_listings.build(business_params)
-            @business_listing.save
-
-            if @business_listing.valid?
-							flash[:success] = "Your listing has been successfully created and sent to the admin to verify it!!"
-              redirect_to root_path
-        	else
-        	  render :new
-            end
-
+    	@business_listing = current_user.business_listings.build(business_params)
+      @business_listing.save
+      if @business_listing.valid?
+				flash[:success] = "Your listing has been successfully created and sent to the admin to verify it!!"
+        redirect_to root_path
+      else
+        render :new
+      end
 		end
 
 		def show
@@ -24,6 +22,7 @@ class BusinessListingsController < ApplicationController
 		def edit
 			@business_listings = BusinessListing.find(params[:id])
 		end
+
 		private
 
 		def business_params
@@ -48,6 +47,4 @@ class BusinessListingsController < ApplicationController
 				:financing_available,
 				:reason_for_selling)
 		end
-
-
 end
