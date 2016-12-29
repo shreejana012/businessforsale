@@ -51,6 +51,10 @@ gem 'simple_form'
 gem 'country_select', '~> 1.0'
 gem 'carrierwave'
 gem 'rails-controller-testing'
+gem 'mailboxer'
+gem 'chosen-rails'
+
+gem 'jquery-turbolinks'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

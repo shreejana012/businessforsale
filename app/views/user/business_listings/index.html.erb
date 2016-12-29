@@ -1,0 +1,6 @@
+<% @business_listing.each do |business_listing| %>
+<%= image_tag business_listing.photo, class: "image" %>
+  <%= business_listing.title %>
+  <%= business_listing.location %>
+    <%= link_to 'Read More', business_listing_path(business_listing) %>
+<% end %>

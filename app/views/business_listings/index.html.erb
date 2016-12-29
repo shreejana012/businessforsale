@@ -4,7 +4,8 @@
 		<h3>Account Details</h3>
 		<ul>
 			<li><%= link_to 'Edit Account',  edit_user_registration_path %></li>
-				<li><%= link_to 'Cancel My Account',cancel_user_registration_path, data: { confirm: "Are you sure?" }, method: :delete %></li>
+			<li><%= link_to 'Cancel My Account',cancel_user_registration_path, data: { confirm: "Are you sure?" }, method: :delete %></li>
+			<li><%= link_to "My jobs", user_business_listings_path %></li>
 		</ul>
 	</div>
 	<div class = "col-md-8">
@@ -12,7 +13,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">Seller Account</div>
   <div class="panel-body">
-  	<%= link_to 'Create Listings',new_business_listing_path %> 
+  	<%= link_to 'Create Listings',new_business_listing_path %>
   	<%= link_to 'Payment History', root_path %>
   </div>
 </div>
@@ -24,4 +25,3 @@
 </div>
 </div>
 </div>
- 	

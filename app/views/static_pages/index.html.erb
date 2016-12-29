@@ -1,8 +1,22 @@
-<h3>Business</h3>	
-<% @business_listing.each do |item| %>
-<%= image_tag item.photo, class: "image" %>
-<%= item.title %>
-Location
-<%= item.location %>
-<%= link_to 'Read More', business_listing_path(item) %>
-<% end %>
+<h3>Business</h3>
+  <div class="row">
+  <% @business_listing.each do |item| %>
+  <div class = "post-box">
+    <div class = "col-md-4">
+    <div class = "post-heading">
+      <h5>Title</h5>
+        <%= item.title %>
+    </div>
+    <div class = "post-body">
+      <%= image_tag item.photo, class: "image" %>
+      <h5>Location</h5>
+      <%= item.location %><br>
+    </div>
+    <div class = "post-footer">
+      <%= link_to 'Read More', business_listing_path(item) %>
+    </div>
+</div>
+</div>
+  <% end %>
+
+</div>

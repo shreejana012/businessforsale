@@ -26,4 +26,50 @@
 <%= @business_listings.financing_available%><br>
 
 <h3>Miscellaneous</h3>
-<%= @business_listings.reason_for_selling%><br>
+<%= @business_listings.reason_for_selling%><br />
+<br />
+
+
+<% if user_signed_in? %>
+<p>Want to buy business? send message to the seller<p>
+  <%= link_to'Send Message', conversations_path %>
+<% else %>
+        <%= form_for(:user, :url => session_path(:user)) do |f| %>
+        <div class = "field">
+        <%= f.text_field :first_name, autofocus: true, class: 'input-form',placeholder: 'First Name' %>
+        </div>
+        <div class = "field">
+          <%= f.text_field :middle_name, autofocus: true, class: 'input-form',placeholder: 'Middle Name' %>
+        </div>
+        <br />
+        <div class = "field">
+          <%= f.text_field :last_name, autofocus: true, class: 'input-form',placeholder: 'Last Name' %>
+        </div>
+        <br />
+        <div class = "field">
+          <%= f.text_field :phone_number, autofocus: true,class: 'input-form', placeholder: 'Phone Number' %>
+        </div>
+        <br />
+        <div class="field">
+          <%= f.email_field :email, autofocus: true, class: 'input-form', placeholder: 'Email' %>
+        </div>
+        <br />
+        <div class="field">
+          <%= f.password_field :password, autocomplete: "off", class: 'input-form',placeholder: 'Password' %>
+        </div>
+        <br />
+        <div class="field">
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Password Again'%>
+        </div>
+        <div class = "field">
+            <%= f.label :Select_your_country %><br>
+             <%= f.country_select :country_select, as: :country_select, required: true %>
+        </div>
+        <br />
+        <div class="actions">
+          <%= f.submit "Sign up" %>
+        </div>
+        <% end %>
+
+
+        <% end %>
